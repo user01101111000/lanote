@@ -27,7 +27,7 @@ const AboutUsContainer: FC = (): JSX.Element => {
                         <a href="https://www.linkedin.com/in/elnurguliyev/" target={"_blank"}><FaLinkedin/></a>
                     </div>
 
-                    <p>{t("about_us_copyright")}</p>
+                    <p>Copyright © 2024 lanote</p>
                 </div>
 
 

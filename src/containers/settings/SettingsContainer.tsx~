@@ -4,10 +4,12 @@ import paper from "../../assets/images/paper.webp";
 import {useFormik} from "formik";
 import {SettingProps} from "../../types/data/data_types.ts";
 import {useSettings} from "../../context/SettingsContext.tsx";
+import {useTranslation} from "react-i18next";
 
 
 const SettingsContainer: FC = (): JSX.Element => {
 
+    const {i18n, t} = useTranslation();
     const {data, update_data} = useSettings();
 
     const {values, handleChange, setFieldValue} = useFormik<SettingProps>({
@@ -22,8 +24,8 @@ const SettingsContainer: FC = (): JSX.Element => {
 
 
     function save_settings(data: SettingProps): void {
-        console.log(data)
         update_data(data);
+        i18n.changeLanguage(data.lang)
     }
 
     useEffect((): void => {
@@ -40,7 +42,7 @@ const SettingsContainer: FC = (): JSX.Element => {
             <div className={"settings_content"}>
 
                 <div className={"setting_1 setting_box"}>
-                    <p>Language</p>
+                    <p>{t("language")}</p>
 
                     <select name="language" id="language" value={values.lang}
                             onChange={(e: ChangeEvent<HTMLSelectElement>): void => {

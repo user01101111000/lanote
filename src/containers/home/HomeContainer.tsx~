@@ -1,11 +1,8 @@
 import {FC, JSX} from "react";
 import paper from "../../assets/images/paper.webp";
-import sender from "../../assets/images/sender.webp";
-import setting from "../../assets/images/setting.webp";
-import about from "../../assets/images/about.webp";
 import ASection from "../../components/common/ASection.tsx";
 import {useFormik} from "formik";
-import {NavigateFunction, useNavigate} from "react-router-dom";
+
 
 const HomeContainer: FC = (): JSX.Element => {
 
