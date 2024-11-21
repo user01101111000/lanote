@@ -26,54 +26,6 @@
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(src/assets/images/bg.webp) center center no-repeat;
   background-size: cover;
 
-  button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-
-    cursor: pointer;
-  }
-
-  .buttons {
-
-    user-select: none;
-    display: flex;
-    align-items: center;
-
-    gap: 2rem;
-
-    .sender {
-
-
-      height: 60px;
-      width: 60px;
-      cursor: pointer;
-
-
-      img {
-        height: 100%;
-        width: 100%;
-
-
-        filter: brightness(75%);
-      }
-
-    }
-
-    .setting_icon {
-      height: 40px;
-      width: 40px;
-
-
-      img {
-        height: 100%;
-        width: 100%;
-
-
-        filter: brightness(75%);
-      }
-    }
-  }
 }
 
 ::selection {

@@ -48,9 +48,10 @@ const SettingsContainer: FC = (): JSX.Element => {
                             onChange={(e: ChangeEvent<HTMLSelectElement>): void => {
                                 setFieldValue("lang", e.target.value);
                             }}>
-                        <option value="en">En</option>
-                        <option value="tr">Tr</option>
-                        <option value="az">Az</option>
+                        <option value="en">english</option>
+                        <option value="az">azerbaijani</option>
+                        <option value="tr">turkish</option>
+
                     </select>
                 </div>
 

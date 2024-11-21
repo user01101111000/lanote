@@ -40,8 +40,9 @@
         inset: 0;
         background-color: transparent;
 
-        transform: scale(0.72);
+        transform: scaleX(0.80) scaleY(0.70);
 
+        text-align: center;
         font-size: 3rem;
         font-style: italic;
 
@@ -52,6 +53,10 @@
         scrollbar-width: none;
 
         font-weight: 500;
+
+        mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.7) 80%, rgba(0, 0, 0, 0) 100%);
+
+        border-radius: 20px;
 
 
         &::placeholder {

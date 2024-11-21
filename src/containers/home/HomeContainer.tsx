@@ -21,7 +21,6 @@ const HomeContainer: FC = (): JSX.Element => {
     function onSubmit(values: { text: string }): void {
         console.log(values);
         resetForm();
-
     }
 
 
@@ -35,10 +34,7 @@ const HomeContainer: FC = (): JSX.Element => {
                 <textarea name="text" id="text" rows={7} placeholder={t("type_here")} value={values.text}
                           onChange={handleChange}></textarea>
 
-
             </figure>
-
-
         </form>
 
     </ASection>
