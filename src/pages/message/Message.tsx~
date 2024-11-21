@@ -1,0 +1,7 @@
+import MessageContainer from "../../containers/message/MessageContainer.tsx";
+
+const Message: FC = (): JSX.Element => {
+    return <MessageContainer/>
+}
+
+export default Message;
