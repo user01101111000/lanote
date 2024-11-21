@@ -1,13 +1,63 @@
-import {FC, JSX} from "react";
+import {ChangeEvent, FC, JSX, useEffect} from "react";
 import ASection from "../../components/common/ASection.tsx";
 import paper from "../../assets/images/paper.webp";
+import {useFormik} from "formik";
+import {SettingProps} from "../../types/data/data_types.ts";
+import {useSettings} from "../../context/SettingsContext.tsx";
 
 
 const SettingsContainer: FC = (): JSX.Element => {
+
+    const {data, update_data} = useSettings();
+
+    const {values, handleChange, setFieldValue} = useFormik<SettingProps>({
+        initialValues: {
+            lang: data.lang,
+            sound: data.sound,
+        },
+        validateOnChange: true,
+        onSubmit: (): void => {
+        }
+    })
+
+
+    function save_settings(data: SettingProps): void {
+        update_data(data);
+    }
+
+    useEffect((): void => {
+        save_settings(values)
+    }, [values])
+
+
     return <ASection className={"settings"}>
 
         <figure className={"paper"}>
             <img src={paper} alt="paper" loading={"lazy"}/>
+
+
+            <div className={"settings_content"}>
+
+                <div className={"setting_1 setting_box"}>
+                    <p>Language</p>
+
+                    <select name="language" id="language" value={values.lang}
+                            onChange={(e: ChangeEvent<HTMLSelectElement>): void => {
+                                setFieldValue("lang", e.target.value);
+                            }}>
+                        <option value="en">En</option>
+                        <option value="tr">Tr</option>
+                        <option value="az">Az</option>
+                    </select>
+                </div>
+
+                <div className={"setting_2 setting_box"}>
+                    <p>Sound effects</p>
+
+                    <input type="checkbox" id={"sound"} name={"sound"} checked={values.sound} onChange={handleChange}/>
+                </div>
+            </div>
+
         </figure>
 
 

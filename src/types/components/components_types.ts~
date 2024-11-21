@@ -7,7 +7,7 @@ export type IProvidersProps = {
 
 export type SettingContextProps = {
     data: SettingProps,
-    update_data: (new_data: SettingProps) => void
+    update_data: () => void
 }
 
 export type SettingContextProviderProps = {

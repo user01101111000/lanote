@@ -1,0 +1,4 @@
+type settings = {
+    lang: string,
+    sound: boolean
+}

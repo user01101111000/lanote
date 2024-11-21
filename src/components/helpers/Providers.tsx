@@ -1,6 +1,7 @@
 import {FC, JSX} from "react";
 import {QueryClientProvider, QueryClient} from "@tanstack/react-query";
 import {IProvidersProps} from "../../types/components/components_types.ts";
+import {SettingContextProvider} from "../../context/SettingsContext.tsx";
 
 
 const queryClient: QueryClient = new QueryClient(
@@ -15,8 +16,10 @@ const queryClient: QueryClient = new QueryClient(
 
 
 const Providers: FC<IProvidersProps> = (props: IProvidersProps): JSX.Element => {
-    return <QueryClientProvider client={queryClient}>{props.children}
-    </QueryClientProvider>
+    return <SettingContextProvider>
+        <QueryClientProvider client={queryClient}>{props.children}
+        </QueryClientProvider>
+    </SettingContextProvider>
 
 
 }

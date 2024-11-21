@@ -29,13 +29,13 @@ const routes: RouteObject[] = [
             {
                 path: "/settings",
                 element: <Settings/>
-            },
-
-            {
-                path: "*",
-                element: <NotFound/>
             }
         ]
+    },
+
+    {
+        path: "*",
+        element: <NotFound/>
     }
 ];
 

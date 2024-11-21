@@ -1,7 +1,6 @@
 import {FC, JSX} from "react";
 import {QueryClientProvider, QueryClient} from "@tanstack/react-query";
 import {IProvidersProps} from "../../types/components/components_types.ts";
-import {ThemeContextProvider} from "../../context/ThemeContext.tsx";
 
 
 const queryClient: QueryClient = new QueryClient(

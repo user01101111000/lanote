@@ -54,7 +54,7 @@ const Layout: FC = (): JSX.Element => {
             </button>
 
 
-            <button type={"button"} onClick={(): void => {
+            <button type={"button"} onClick={() => {
                 if (location.pathname != "/settings") {
                     if (data.sound) play_audio();
                     navigate("/settings");

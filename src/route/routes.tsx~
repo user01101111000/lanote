@@ -25,7 +25,7 @@ const routes: RouteObject[] = [
                 path: "/about_us",
                 element: <AboutUs/>
             },
-            
+
             {
                 path: "/settings",
                 element: <Settings/>
