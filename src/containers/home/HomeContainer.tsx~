@@ -57,7 +57,7 @@ const HomeContainer: FC = (): JSX.Element => {
         } finally {
             setShowLoading(false);
         }
-
+        
         if (data.sound) play_audio();
         resetForm();
 

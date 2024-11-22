@@ -16,8 +16,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "settings": "settings",
                 "write": "write",
                 "send": "send",
-                "load_text": "the pigeon will hit the road soon...",
-                "not_found_text": "i think we got lost in the palace, let's go home..."
+                "load_text" : "the pigeon will hit the road soon...",
+                "not_found_text" : "i think we got lost in the palace, let's go home..."
             }
         },
         az: {
@@ -31,8 +31,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "settings": "tənzimləmələr",
                 "write": "yaz",
                 "send": "göndər",
-                "load_text": "göyərçin tezliklə yola düşəcək...",
-                "not_found_text": "deyəsən sarayda yolumuzu itirdik, gəl evə gedək..."
+                "load_text" : "göyərçin tezliklə yola düşəcək...",
+                "not_found_text" : "duzgun yerden kecdin, evden kecdin..."
             }
         },
         tr: {
@@ -46,8 +46,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "settings": "ayarlar",
                 "write": "yaz",
                 "send": "gönder",
-                "load_text": "güvercin yakında yola çıkacak...",
-                "not_found_text": "sanırım sarayda yolumuzu kaybettik, hadi eve gidelim..."
+                "load_text" : "güvercin yakında yola çıkacak..."
             }
         }
     }

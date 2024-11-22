@@ -44,10 +44,29 @@
       inset: 0;
 
       gap: 1rem;
-      transform: scaleX(0.80) scaleY(0.70);
+      transform: scaleX(0.80) scaleY(0.72) translateY(-5px);
+      mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.8) 90%, rgba(0, 0, 0, 0) 100%);
 
 
-      background-color: red;
+      overflow-y: auto;
+      scrollbar-width: none;
+
+      font-size: 3rem;
+
+
+      @include respond(tab-land) {
+        font-size: 2.5rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 2.2rem;
+
+      }
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+
     }
 
 
@@ -63,6 +82,20 @@
 
     @include respond(phone) {
       height: 400px;
+    }
+  }
+
+  .delete_message {
+    height: auto;
+    width: 45px;
+
+    cursor: pointer;
+
+    img {
+      height: 100%;
+      width: 100%;
+
+      filter: brightness(80%);
     }
   }
 

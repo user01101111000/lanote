@@ -178,6 +178,7 @@
             font-size: 2rem;
           }
 
+
         }
 
 
@@ -226,6 +227,7 @@
 
       @include respond(phone) {
         height: 400px;
+        width: auto;
       }
 
 
