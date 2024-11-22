@@ -17,6 +17,7 @@ const post_message: (message: string) => Promise<void> = async (message: string)
             "date": {
                 "timestampValue": new Date().toISOString()
             }
+       
         }
     }
 

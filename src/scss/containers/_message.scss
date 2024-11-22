@@ -12,7 +12,7 @@
 
   flex-direction: column;
 
-  gap: 1.5rem;
+  gap: clamp(0.8rem, 2vw, 2rem);
 
   transition: all 0.3s ease-in-out;
   color: var(--text-color);
@@ -83,6 +83,41 @@
     @include respond(phone) {
       height: 400px;
     }
+
+
+    .burning {
+      position: absolute;
+      height: 700px;
+      width: auto;
+
+      top: -28px;
+
+      transform: rotate(-0.2deg);
+
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+
+      @include respond(tab-land) {
+        height: 600px;
+        top: -25px;
+      }
+
+      @include respond(tab-port) {
+        height: 500px;
+        top: -20px;
+
+      }
+
+      @include respond(phone) {
+        height: 400px;
+        top: -16px;
+      }
+
+    }
   }
 
   .delete_message {
@@ -97,6 +132,82 @@
 
       filter: brightness(80%);
     }
+
+
+    @include respond(tab-land) {
+      width: 35px;
+    }
+
+
+    @include respond(phone) {
+      width: 25px;
+    }
+
+  }
+
+
+  .loading_screen {
+    min-height: 100vh;
+    width: 100%;
+
+    background-color: black;
+    opacity: 0.7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    gap: 2rem;
+
+
+    h1 {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 2rem;
+
+    }
+
+    figure {
+      width: 150px;
+      height: auto;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .error_screen {
+    min-height: 100vh;
+    width: 100%;
+
+    background-color: black;
+    opacity: 0.7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    gap: 2rem;
+
+    padding: 2rem;
+
+    h1 {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: clamp(1.7rem, 3vw, 2rem);
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .error_burn {
+
+      mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0) 100%);
+    }
+
   }
 
 }

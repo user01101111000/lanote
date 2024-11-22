@@ -4,7 +4,7 @@ export type SettingProps = {
 }
 
 
-export interface Message {
+export interface IMessage {
     name: string;
     fields: Fields;
     createTime: string;

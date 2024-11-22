@@ -12,7 +12,6 @@ export interface IMessage {
 }
 
 interface Fields {
-    read: Read;
     id: Id;
     message: Id;
     date: Date;
@@ -24,8 +23,4 @@ interface Date {
 
 interface Id {
     stringValue: string;
-}
-
-interface Read {
-    booleanValue: boolean;
 }
