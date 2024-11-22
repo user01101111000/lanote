@@ -1,7 +1,23 @@
-import {FC} from "react";
+import {FC, JSX} from "react";
+import paper from "../../assets/images/paper.webp";
+import ASection from "../../components/common/ASection.tsx";
+
 
 const MessageContainer: FC = (): JSX.Element => {
-    return <section>MessageContainer</section>
+    return <section className={"message"}>
+
+        <ASection className={"paper"}>
+
+            <img src={paper} alt="paper" loading={"lazy"}/>
+
+            <div className={"message_content"}>
+                <p>lorem ipsum</p>
+            </div>
+
+        </ASection>
+
+
+    </section>
 }
 
 export default MessageContainer;

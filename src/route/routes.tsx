@@ -17,11 +17,6 @@ const routes: RouteObject[] = [
             },
 
             {
-                path: "/message/:id",
-                element: <Message/>
-            },
-
-            {
                 path: "/about_us",
                 element: <AboutUs/>
             },
@@ -32,7 +27,10 @@ const routes: RouteObject[] = [
             }
         ]
     },
-
+    {
+        path: "/message/:id",
+        element: <Message/>
+    },
     {
         path: "*",
         element: <NotFound/>

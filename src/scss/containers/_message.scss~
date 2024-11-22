@@ -49,21 +49,6 @@
 
       background-color: red;
     }
-
-
-    @include respond(tab-land) {
-      height: 600px;
-
-
-    }
-
-    @include respond(tab-port) {
-      height: 500px;
-    }
-
-    @include respond(phone) {
-      height: 400px;
-    }
   }
 
 }

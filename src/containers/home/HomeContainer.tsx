@@ -9,16 +9,16 @@ import {messageSchema} from "../../utils/form/schema.ts";
 import {AnimatePresence, motion} from "framer-motion";
 import {useSettings} from "../../context/SettingsContext.tsx";
 import loading from "../../assets/gifs/message_sending.gif";
+// import {NavigateFunction, useNavigate} from "react-router-dom";
 
 
 const HomeContainer: FC = (): JSX.Element => {
 
     const [showLoading, setShowLoading] = useState<boolean>(false);
-
     const {data} = useSettings();
     const {t} = useTranslation();
-
     const audio_ref: MutableRefObject<HTMLAudioElement> = useRef(new Audio("src/assets/audio/wings.mp3"));
+//    const navigate: NavigateFunction = useNavigate();
 
     useEffect((): void => {
         const audio: HTMLAudioElement = audio_ref.current;
@@ -45,7 +45,7 @@ const HomeContainer: FC = (): JSX.Element => {
     async function onSubmit(values: { message: string }): Promise<void> {
 
         setShowLoading(true);
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise((resolve: (value: unknown) => void): number => setTimeout(resolve, 4000));
         setShowLoading(false)
 
         console.log(values);
@@ -95,7 +95,7 @@ const HomeContainer: FC = (): JSX.Element => {
                         <img src={loading} alt="loading"/>
                     </figure>
 
-                    <h1>message sending...</h1>
+                    <h1>{t("load_text")}</h1>
 
                 </motion.div>}
             </AnimatePresence>

@@ -15,7 +15,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "about": "about",
                 "settings": "settings",
                 "write": "write",
-                "send": "send"
+                "send": "send",
+                "load_text" : "we deliver your message to the pigeon, it will be on its way soon..."
             }
         },
         az: {
@@ -28,7 +29,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "about": "haqqımızda",
                 "settings": "tənzimləmələr",
                 "write": "yaz",
-                "send": "göndər"
+                "send": "göndər",
+                "load_text" : "mesajınızı göyərçinə çatdırırıq, tezliklə yola düşəcək..."
             }
         },
         tr: {
@@ -41,7 +43,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "about": "hakkımızda",
                 "settings": "ayarlar",
                 "write": "yaz",
-                "send": "gönder"
+                "send": "gönder",
+                "load_text" : "mesajınızı güvercine teslim ediyoruz, yakında yola çıkacak..."
             }
         }
     }
