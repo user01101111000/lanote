@@ -37,7 +37,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "load_text": "göyərçin tezliklə yola düşəcək...",
                 "not_found_text": "deyəsən sarayda yolumuzu itirdik, gəl evə gedək...",
                 "loading": "yüklənir...",
-                "error_text" : "məktub artıq yanıb... bizə qalan tək şey, sözlərin alovlarla rəqsini izləməkdir...",
+                "error_text": "məktub artıq yanıb... bizə qalan tək şey, sözlərin alovlarla rəqsini izləməkdir...",
                 "go_home": "evə qayıt"
             }
         },
@@ -55,7 +55,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "load_text": "güvercin yakında yola çıkacak...",
                 "not_found_text": "sanırım sarayda yolumuzu kaybettik, hadi eve gidelim...",
                 "loading": "yükleniyor...",
-                "error_text": "mektup zaten yandı... bize kalan tek şey, kelimelerin alevlerle dansını izlemek..."
+                "error_text": "mektup artık yandı... bize kalan tek şey, kelimelerin alevlerle dansını izlemek...",
+                "go_home": "eve dön"
             }
         }
     }

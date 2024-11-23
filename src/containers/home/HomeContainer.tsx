@@ -9,24 +9,30 @@ import {messageSchema} from "../../utils/form/schema.ts";
 import {AnimatePresence, motion} from "framer-motion";
 import {useSettings} from "../../context/SettingsContext.tsx";
 import loading from "../../assets/gifs/message_sending.gif";
+import button_bg from "../../assets/images/button_bg.svg"
 import usePostMessage from "../../hooks/service/usePostMessage.tsx";
+
 // import {NavigateFunction, useNavigate} from "react-router-dom";
 
 
 const HomeContainer: FC = (): JSX.Element => {
 
-    const [showLoading, setShowLoading] = useState<boolean>(false);
     const {data} = useSettings();
     const {t} = useTranslation();
     const audio_ref: MutableRefObject<HTMLAudioElement> = useRef(new Audio("src/assets/audio/wings.mp3"));
+    const audio_ref1: MutableRefObject<HTMLAudioElement> = useRef(new Audio("src/assets/audio/go_home.mp3"));
+    const [showLinkPage, setShowLinkPage] = useState<boolean>(false);
+    const [messageURL, setMessageURL] = useState<string>("");
 //    const navigate: NavigateFunction = useNavigate();
 
 
-    const {mutateAsync} = usePostMessage();
+    const {mutateAsync, isPending} = usePostMessage();
 
     useEffect((): void => {
         const audio: HTMLAudioElement = audio_ref.current;
+        const audio1: HTMLAudioElement = audio_ref1.current;
         audio.load();
+        audio1.load();
     }, [])
 
     const play_audio: () => void = (): void => {
@@ -34,6 +40,10 @@ const HomeContainer: FC = (): JSX.Element => {
         audio_ref.current.play();
     }
 
+    const play_audio1: () => void = (): void => {
+        audio_ref1.current.currentTime = 0;
+        audio_ref1.current.play();
+    }
 
     const {values, handleChange, handleSubmit, resetForm, errors, touched, handleBlur} = useFormik<{
         message: string
@@ -47,20 +57,17 @@ const HomeContainer: FC = (): JSX.Element => {
 
 
     async function onSubmit(values: { message: string }): Promise<void> {
-
-        setShowLoading(true);
-
         try {
-            await mutateAsync(values.message);
+            const id: string = await mutateAsync(values.message);
+            const message_url: string = window.location.href + "message/" + id
+            setMessageURL(message_url);
+
         } catch (e) {
             console.error(e);
-        } finally {
-            setShowLoading(false);
         }
-
         if (data.sound) play_audio();
         resetForm();
-
+        setShowLinkPage(true);
     }
 
 
@@ -96,8 +103,8 @@ const HomeContainer: FC = (): JSX.Element => {
 
 
             <AnimatePresence>
-                {showLoading && <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}
-                                            className={"loading_win"}>
+                {isPending && <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}
+                                          className={"loading_win"}>
 
                     <figure>
                         <img src={loading} alt="loading"/>
@@ -108,6 +115,24 @@ const HomeContainer: FC = (): JSX.Element => {
                 </motion.div>}
             </AnimatePresence>
         </form>
+
+        <AnimatePresence>
+            {showLinkPage && <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}
+                                         className={"link_page"}>
+                <div className={"link_content"}>
+                    <h1>{messageURL}</h1>
+                </div>
+
+                <figure className={"copy_button"} onClick={(): void => {
+                    if (data.sound) play_audio1();
+                    navigator.clipboard.writeText(messageURL);
+                    setShowLinkPage(false)
+                }}>
+                    <img src={button_bg} alt="button_bg"/>
+                    <h1>{t("copy")}</h1>
+                </figure>
+            </motion.div>}
+        </AnimatePresence>
 
     </ASection>
 

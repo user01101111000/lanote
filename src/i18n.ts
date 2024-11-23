@@ -20,7 +20,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "not_found_text": "i think we got lost in the palace, let's go home...",
                 "loading": "loading...",
                 "error_text": "the letter has already burned... all that's left for us is to watch the dance of words with the flames...",
-                "go_home": "go home"
+                "go_home": "go home",
+                "copy": "copy"
             }
         },
         az: {
@@ -37,8 +38,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "load_text": "göyərçin tezliklə yola düşəcək...",
                 "not_found_text": "deyəsən sarayda yolumuzu itirdik, gəl evə gedək...",
                 "loading": "yüklənir...",
-                "error_text" : "məktub artıq yanıb... bizə qalan tək şey, sözlərin alovlarla rəqsini izləməkdir...",
-                "go_home": "evə qayıt"
+                "error_text": "məktub artıq yanıb... bizə qalan tək şey, sözlərin alovlarla rəqsini izləməkdir...",
+                "go_home": "evə qayıt",
+                "copy": "köçür"
             }
         },
         tr: {
@@ -55,8 +57,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "load_text": "güvercin yakında yola çıkacak...",
                 "not_found_text": "sanırım sarayda yolumuzu kaybettik, hadi eve gidelim...",
                 "loading": "yükleniyor...",
-                "error_text": "mektup zaten yandı... bize kalan tek şey, kelimelerin alevlerle dansını izlemek...",
-                "go_home": "eve dön"
+                "error_text": "mektup artık yandı... bize kalan tek şey, kelimelerin alevlerle dansını izlemek...",
+                "go_home": "eve dön",
+                "copy": "kopyala"
             }
         }
     }

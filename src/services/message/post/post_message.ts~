@@ -17,13 +17,14 @@ const post_message: (message: string) => Promise<void> = async (message: string)
             "date": {
                 "timestampValue": new Date().toISOString()
             }
-       
         }
     }
 
 
     await get_axios_instance().patch("/messages/" + id, data);
 
+
+    return id;
 }
 
 export default post_message;
