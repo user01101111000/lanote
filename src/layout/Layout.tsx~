@@ -1,21 +1,16 @@
-import {Location, NavigateFunction, Outlet, useLocation, useNavigate} from "react-router-dom";
-import {FC, JSX, MutableRefObject, useEffect, useRef} from "react";
-
-import {useSettings} from "../context/SettingsContext.tsx";
+import {Outlet} from "react-router-dom";
+import {FC, JSX, Suspense,} from "react";
+import NavButtons from "../components/common/NavButtons.tsx";
+import LoadingScreen from "../components/common/LoadingScreen.tsx";
 
 
 const Layout: FC = (): JSX.Element => {
 
-
-
-
-
-
     return <main className="layout">
-        <Outlet/>
-
-
-
+        <Suspense fallback={<section className={"home"}><LoadingScreen/></section>}>
+            <Outlet/>
+        </Suspense>
+        <NavButtons/>
     </main>
 
 }

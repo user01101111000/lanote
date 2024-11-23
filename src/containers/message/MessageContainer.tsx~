@@ -9,6 +9,8 @@ import burning from "../../assets/gifs/burning.gif";
 import useDeleteMessage from "../../hooks/service/useDeleteMessage.tsx";
 import {useSettings} from "../../context/SettingsContext.tsx";
 import LoadingScreen from "../../components/common/LoadingScreen.tsx";
+import ErrorScreen from "../../components/common/ErrorScreen.tsx";
+import {useTranslation} from "react-i18next";
 
 
 const MessageContainer: FC = (): JSX.Element => {
@@ -16,6 +18,7 @@ const MessageContainer: FC = (): JSX.Element => {
     const {id} = useParams();
     const [showFire, setShowFire] = useState<boolean>(true);
     const [showBurn, setShowBurn] = useState<boolean>(false);
+    const {t} = useTranslation();
     const {mutate} = useDeleteMessage();
     const {data: settings} = useSettings();
     const audio_ref: MutableRefObject<HTMLAudioElement> = useRef<HTMLAudioElement>(new Audio("/src/assets/audio/deleting.mp3"));
@@ -50,10 +53,7 @@ const MessageContainer: FC = (): JSX.Element => {
     </section>
 
     if (isError) return <section className={"message"}>
-
-        error
-
-
+        <ErrorScreen/>
     </section>
 
 

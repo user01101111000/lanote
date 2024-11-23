@@ -21,7 +21,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "loading": "loading...",
                 "error_text": "the letter has already burned... all that's left for us is to watch the dance of words with the flames...",
                 "go_home": "go home",
-                "copy": "copy"
+                "copy": "copy",
+                "burn_message": "burn the message"
             }
         },
         az: {
@@ -40,7 +41,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "loading": "yüklənir...",
                 "error_text": "məktub artıq yanıb... bizə qalan tək şey, sözlərin alovlarla rəqsini izləməkdir...",
                 "go_home": "evə qayıt",
-                "copy": "köçür"
+                "copy": "köçür",
+                "burn_message": "mesajı yandır"
             }
         },
         tr: {
@@ -59,7 +61,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "loading": "yükleniyor...",
                 "error_text": "mektup artık yandı... bize kalan tek şey, kelimelerin alevlerle dansını izlemek...",
                 "go_home": "eve dön",
-                "copy": "kopyala"
+                "copy": "kopyala",
+                "burn_message": "mesajı yak"
             }
         }
     }

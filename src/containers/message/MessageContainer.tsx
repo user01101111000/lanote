@@ -10,6 +10,7 @@ import useDeleteMessage from "../../hooks/service/useDeleteMessage.tsx";
 import {useSettings} from "../../context/SettingsContext.tsx";
 import LoadingScreen from "../../components/common/LoadingScreen.tsx";
 import ErrorScreen from "../../components/common/ErrorScreen.tsx";
+import {useTranslation} from "react-i18next";
 
 
 const MessageContainer: FC = (): JSX.Element => {
@@ -17,6 +18,7 @@ const MessageContainer: FC = (): JSX.Element => {
     const {id} = useParams();
     const [showFire, setShowFire] = useState<boolean>(true);
     const [showBurn, setShowBurn] = useState<boolean>(false);
+    const {t} = useTranslation();
     const {mutate} = useDeleteMessage();
     const {data: settings} = useSettings();
     const audio_ref: MutableRefObject<HTMLAudioElement> = useRef<HTMLAudioElement>(new Audio("/src/assets/audio/deleting.mp3"));
@@ -81,7 +83,7 @@ const MessageContainer: FC = (): JSX.Element => {
         <AnimatePresence>
             {showFire && <motion.figure initial={{opacity: 1, translateY: 0}} exit={{opacity: 0, translateY: -100}}
                                         transition={{duration: 2}}
-                                        data-tooltip-content="burn the message" data-tooltip-id="delete_message"
+                                        data-tooltip-content={t("burn_message")} data-tooltip-id="delete_message"
                                         className={"delete_message"}
                                         onClick={burn_message}>
                 <img src={fire} alt="fire"/>
