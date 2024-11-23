@@ -10,11 +10,13 @@ import useDeleteMessage from "../../hooks/service/useDeleteMessage.tsx";
 import loading from "../../assets/gifs/message_sending.gif";
 import error_burn from "../../assets/gifs/error_burn.gif";
 import {useSettings} from "../../context/SettingsContext.tsx";
+import {useTranslation} from "react-i18next";
 
 
 const MessageContainer: FC = (): JSX.Element => {
 
     const {id} = useParams();
+    const {t} = useTranslation();
     const [showFire, setShowFire] = useState<boolean>(true);
     const [showBurn, setShowBurn] = useState<boolean>(false);
     const {mutate} = useDeleteMessage();
@@ -52,7 +54,8 @@ const MessageContainer: FC = (): JSX.Element => {
                 <img src={loading} alt="loading" loading={"lazy"}/>
             </motion.figure>
 
-            <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}}>loading...</motion.h1>
+            <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}}
+                       transition={{duration: 1}}>{t("loading")}</motion.h1>
         </motion.div>
     </section>
 
@@ -65,9 +68,8 @@ const MessageContainer: FC = (): JSX.Element => {
             </motion.figure>
 
 
-            <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}}>the message has already
-                burned... all that's left for us is to watch the dance of words with the flames...
-            </motion.h1>
+            <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}}
+                       transition={{duration: 1}}>{t("error_text")}</motion.h1>
         </div>
 
 

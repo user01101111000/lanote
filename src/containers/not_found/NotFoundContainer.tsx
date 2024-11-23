@@ -32,7 +32,7 @@ const NotFoundContainer: FC = (): JSX.Element => {
         }}>
             <img src={go_home} alt="go_home"/>
 
-            <h1>go home</h1>
+            <h1>{t("go_home")}</h1>
         </figure>
 
     </section>
