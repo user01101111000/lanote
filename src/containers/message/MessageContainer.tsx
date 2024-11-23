@@ -59,7 +59,7 @@ const MessageContainer: FC = (): JSX.Element => {
 
     return <section className={"message"}>
 
-        <motion.figure initial={{opacity: 0}} animate={{opacity: 1}} className={"paper"}>
+        <figure className={"paper"}>
 
             <img src={paper} alt="paper" loading={"lazy"}/>
 
@@ -77,7 +77,7 @@ const MessageContainer: FC = (): JSX.Element => {
                 }
             </AnimatePresence>
 
-        </motion.figure>
+        </figure>
 
 
         <AnimatePresence>
