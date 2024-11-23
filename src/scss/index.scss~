@@ -8,4 +8,3 @@
 @forward "containers/not_found";
 @forward "components/nav_buttons";
 @forward "components/loading_screen";
-@forward "components/error_screen";

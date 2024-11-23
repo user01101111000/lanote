@@ -8,11 +8,9 @@ import {Tooltip} from "react-tooltip";
 import {messageSchema} from "../../utils/form/schema.ts";
 import {AnimatePresence, motion} from "framer-motion";
 import {useSettings} from "../../context/SettingsContext.tsx";
-import loading from "../../assets/gifs/message_sending.gif";
 import button_bg from "../../assets/images/button_bg.svg"
 import usePostMessage from "../../hooks/service/usePostMessage.tsx";
-
-// import {NavigateFunction, useNavigate} from "react-router-dom";
+import LoadingScreen from "../../components/common/LoadingScreen.tsx";
 
 
 const HomeContainer: FC = (): JSX.Element => {
@@ -23,7 +21,6 @@ const HomeContainer: FC = (): JSX.Element => {
     const audio_ref1: MutableRefObject<HTMLAudioElement> = useRef(new Audio("src/assets/audio/go_home.mp3"));
     const [showLinkPage, setShowLinkPage] = useState<boolean>(false);
     const [messageURL, setMessageURL] = useState<string>("");
-//    const navigate: NavigateFunction = useNavigate();
 
 
     const {mutateAsync, isPending} = usePostMessage();
@@ -102,18 +99,8 @@ const HomeContainer: FC = (): JSX.Element => {
             <Tooltip id={"sender"}/>
 
 
-            <AnimatePresence>
-                {isPending && <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}
-                                          className={"loading_win"}>
+            {isPending && <LoadingScreen/>}
 
-                    <figure>
-                        <img src={loading} alt="loading"/>
-                    </figure>
-
-                    <h1>{t("load_text")}</h1>
-
-                </motion.div>}
-            </AnimatePresence>
         </form>
 
         <AnimatePresence>
