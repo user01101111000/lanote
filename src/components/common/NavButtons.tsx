@@ -6,6 +6,7 @@ import {useSettings} from "../../context/SettingsContext.tsx";
 import {Location, NavigateFunction, useLocation, useNavigate} from "react-router-dom";
 import {Tooltip} from 'react-tooltip'
 import {useTranslation} from "react-i18next";
+import next_page from "../../assets/audio/next_page.mp3";
 
 const NavButtons: FC = (): JSX.Element => {
 
@@ -15,7 +16,7 @@ const NavButtons: FC = (): JSX.Element => {
     const navigate: NavigateFunction = useNavigate();
     const location: Location = useLocation();
 
-    const audioRef: MutableRefObject<HTMLAudioElement> = useRef(new Audio("src/assets/audio/next_page.wav"));
+    const audioRef: MutableRefObject<HTMLAudioElement> = useRef(new Audio(next_page));
 
 
     useEffect((): void => {
@@ -31,35 +32,38 @@ const NavButtons: FC = (): JSX.Element => {
 
     return <div className={"buttons"}>
 
-        <button data-tooltip-id="about" data-tooltip-content={t("about")} type={"button"} className={"about_us_button"} onClick={(): void => {
-            if (location.pathname != "/about_us") {
+        <button data-tooltip-id="about" data-tooltip-content={t("about")} type={"button"} className={"about_us_button"}
+                onClick={(): void => {
+                    if (location.pathname != "/about_us") {
 
-                if (data.sound) play_audio();
+                        if (data.sound) play_audio();
 
-                navigate("/about_us");
-            }
-        }
-        }>
+                        navigate("/about_us");
+                    }
+                }
+                }>
             <figure className={"setting_icon"}>
                 <img src={about} alt="about" loading={"lazy"}/>
             </figure>
         </button>
 
 
-        <button data-tooltip-id="write" data-tooltip-content={t("write")} type={"button"} className={"home_button"} onClick={(): void => {
-            if (location.pathname != "/") {
-                if (data.sound) play_audio();
-                navigate("/");
-            }
+        <button data-tooltip-id="write" data-tooltip-content={t("write")} type={"button"} className={"home_button"}
+                onClick={(): void => {
+                    if (location.pathname != "/") {
+                        if (data.sound) play_audio();
+                        navigate("/");
+                    }
 
-        }}>
+                }}>
             <figure className={"sender"}>
                 <img src={sender} alt="sender" loading={"lazy"}/>
             </figure>
         </button>
 
 
-        <button data-tooltip-id="settings" data-tooltip-content={t("settings")} type={"button"} className={"settings_button"} onClick={(): void => {
+        <button data-tooltip-id="settings" data-tooltip-content={t("settings")} type={"button"}
+                className={"settings_button"} onClick={(): void => {
             if (location.pathname != "/settings") {
                 if (data.sound) play_audio();
                 navigate("/settings");

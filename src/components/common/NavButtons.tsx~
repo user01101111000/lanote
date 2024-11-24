@@ -7,6 +7,7 @@ import {Location, NavigateFunction, useLocation, useNavigate} from "react-router
 import {Tooltip} from 'react-tooltip'
 import {useTranslation} from "react-i18next";
 
+
 const NavButtons: FC = (): JSX.Element => {
 
     const {t} = useTranslation();
@@ -15,7 +16,7 @@ const NavButtons: FC = (): JSX.Element => {
     const navigate: NavigateFunction = useNavigate();
     const location: Location = useLocation();
 
-    const audioRef: MutableRefObject<HTMLAudioElement> = useRef(new Audio("src/assets/audio/next_page.wav"));
+    const audioRef: MutableRefObject<HTMLAudioElement> = useRef(new Audio("src/assets/audio/next_page.mp3"));
 
 
     useEffect((): void => {
@@ -59,7 +60,7 @@ const NavButtons: FC = (): JSX.Element => {
         </button>
 
 
-        <button data-tooltip-id="settings" data-tooltip-content={t("settings")} type={"button"} onClick={(): void => {
+        <button data-tooltip-id="settings" data-tooltip-content={t("settings")} type={"button"} className={"settings_button"} onClick={(): void => {
             if (location.pathname != "/settings") {
                 if (data.sound) play_audio();
                 navigate("/settings");
