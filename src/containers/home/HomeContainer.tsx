@@ -113,7 +113,7 @@ const HomeContainer: FC = (): JSX.Element => {
                 <figure className={"envelope"}>
                     <img src={envelope} alt="envelope" loading={"lazy"}/>
 
-                    <h1>your link</h1>
+                    <h1>{t("your_link")}</h1>
 
                     <button onClick={(): void => {
                         if (data.sound) play_audio1();

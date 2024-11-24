@@ -19,7 +19,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "load_text": "the pigeon will hit the road soon...",
                 "not_found_text": "i think we got lost in the palace, let's go home...",
                 "loading": "loading...",
-                "error_text": "the letter has already burned... all that's left for us is to watch the dance of words with the flames...",
+                "error_text": "it's too late for everything now...",
                 "go_home": "go home",
                 "copy": "copy",
                 "burn_message": "burn the message",
@@ -30,7 +30,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "next": "next",
                 "back": "back",
                 "skip": "skip",
-                "last": "last"
+                "last": "last",
+                "your_link": "your link",
             }
         },
         az: {
@@ -47,7 +48,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "load_text": "göyərçin tezliklə yola düşəcək...",
                 "not_found_text": "deyəsən sarayda yolumuzu itirdik, gəl evə gedək...",
                 "loading": "yüklənir...",
-                "error_text": "məktub artıq yanıb... bizə qalan tək şey, sözlərin alovlarla rəqsini izləməkdir...",
+                "error_text": "artıq hər şey üçün çox gec...",
                 "go_home": "evə qayıt",
                 "copy": "köçür",
                 "burn_message": "mesajı yandır",
@@ -59,7 +60,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "next": "sonrakı",
                 "back": "əvvəlki",
                 "skip": "keç",
-                "last": "son"
+                "last": "son",
+                "your_link": "sizin linkiniz",
+
             }
         },
         tr: {
@@ -76,7 +79,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "load_text": "güvercin yakında yola çıkacak...",
                 "not_found_text": "sanırım sarayda yolumuzu kaybettik, hadi eve gidelim...",
                 "loading": "yükleniyor...",
-                "error_text": "mektup artık yandı... bize kalan tek şey, kelimelerin alevlerle dansını izlemek...",
+                "error_text": "artık her şey için çok geç...",
                 "go_home": "eve dön",
                 "copy": "kopyala",
                 "burn_message": "mesajı yak",
@@ -88,7 +91,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "next": "sonraki",
                 "back": "önceki",
                 "skip": "geç",
-                "last": "son"
+                "last": "son",
+                "your_link": "sizin linkiniz",
             }
         }
     }

@@ -290,7 +290,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         outline: none;
-        border: 0.5px solid rgba(0, 0, 0, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.4);
         background-color: var(--main-color);
         padding: 0.5rem 0.8rem;
         color: rgba(255, 255, 255, 0.8);
@@ -299,6 +299,12 @@
         font-size: 1.3rem;
 
         cursor: pointer;
+
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+          filter: brightness(140%);
+        }
       }
 
 
@@ -341,7 +347,7 @@
       }
     }
 
-  
+
   }
 
 
