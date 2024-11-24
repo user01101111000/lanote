@@ -14,7 +14,7 @@ html, body {
 
 
 .layout {
-  min-height: 100dvh;
+  height: 100dvh;
   width: 100%;
 
 
@@ -31,8 +31,6 @@ html, body {
   color: var(--text-color);
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(/src/assets/images/bg.webp) center center no-repeat;
   background-size: cover;
-
-
 }
 
 ::selection {
