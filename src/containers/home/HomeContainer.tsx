@@ -11,14 +11,16 @@ import {useSettings} from "../../context/SettingsContext.tsx";
 import button_bg from "../../assets/images/button_bg.svg"
 import usePostMessage from "../../hooks/service/usePostMessage.tsx";
 import LoadingScreen from "../../components/common/LoadingScreen.tsx";
+import wings from "../../assets/audio/wings.mp3";
+import go_home from "../../assets/audio/go_home.mp3";
 
 
 const HomeContainer: FC = (): JSX.Element => {
 
     const {data} = useSettings();
     const {t} = useTranslation();
-    const audio_ref: MutableRefObject<HTMLAudioElement> = useRef(new Audio("src/assets/audio/wings.mp3"));
-    const audio_ref1: MutableRefObject<HTMLAudioElement> = useRef(new Audio("src/assets/audio/go_home.mp3"));
+    const audio_ref: MutableRefObject<HTMLAudioElement> = useRef(new Audio(wings));
+    const audio_ref1: MutableRefObject<HTMLAudioElement> = useRef(new Audio(go_home));
     const [showLinkPage, setShowLinkPage] = useState<boolean>(false);
     const [messageURL, setMessageURL] = useState<string>("");
 

@@ -11,7 +11,7 @@ import {useSettings} from "../../context/SettingsContext.tsx";
 import LoadingScreen from "../../components/common/LoadingScreen.tsx";
 import ErrorScreen from "../../components/common/ErrorScreen.tsx";
 import {useTranslation} from "react-i18next";
-
+import deleting from "../../assets/audio/deleting.mp3"
 
 const MessageContainer: FC = (): JSX.Element => {
 
@@ -21,7 +21,7 @@ const MessageContainer: FC = (): JSX.Element => {
     const {t} = useTranslation();
     const {mutate} = useDeleteMessage();
     const {data: settings} = useSettings();
-    const audio_ref: MutableRefObject<HTMLAudioElement> = useRef<HTMLAudioElement>(new Audio("/src/assets/audio/deleting.mp3"));
+    const audio_ref: MutableRefObject<HTMLAudioElement> = useRef<HTMLAudioElement>(new Audio(deleting));
 
 
     useEffect((): void => {

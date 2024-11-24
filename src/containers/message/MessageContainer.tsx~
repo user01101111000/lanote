@@ -72,7 +72,7 @@ const MessageContainer: FC = (): JSX.Element => {
                     showBurn && <motion.figure initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}
                                                transition={{duration: 3}}
                                                className={"burning"}>
-                        <img src={burning} alt="burning"/>
+                        <img src={burning} alt="burning" loading={"lazy"}/>
                     </motion.figure>
                 }
             </AnimatePresence>
