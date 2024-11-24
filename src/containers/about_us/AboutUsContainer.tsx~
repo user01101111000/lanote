@@ -4,6 +4,8 @@ import paper from "../../assets/images/paper.webp";
 import {FaGithub} from "react-icons/fa";
 import {FaLinkedin} from "react-icons/fa";
 import {useTranslation} from "react-i18next";
+import {Tooltip} from "react-tooltip";
+import poster from "../../assets/images/lanote_poster.png"
 
 
 const AboutUsContainer: FC = (): JSX.Element => {
@@ -18,13 +20,28 @@ const AboutUsContainer: FC = (): JSX.Element => {
             <div className={"about_us_content"}>
                 <h1>lanote</h1>
 
+                <div className={"poster_wrapper"}>
+                    <figure className={"poster_lanote"}>
+                        <img src={poster} alt="poster_lanote" loading={"lazy"}/>
+
+                        <figcaption>lanote poster</figcaption>
+
+                    </figure>
+
+                </div>
+
                 <p>{t("about_us_text")}</p>
 
 
                 <div className={"about_us_footer"}>
                     <div className={"about_us_links"}>
-                        <a href="https://github.com/user01101111000/lanote" target={"_blank"}><FaGithub/></a>
-                        <a href="https://www.linkedin.com/in/elnurguliyev/" target={"_blank"}><FaLinkedin/></a>
+                        <a href="https://github.com/user01101111000/lanote" target={"_blank"} data-tooltip-id="github"
+                           data-tooltip-content="github"><FaGithub/></a>
+                        <a href="https://www.linkedin.com/in/elnurguliyev/" target={"_blank"} data-tooltip-id="linkedin"
+                           data-tooltip-content="linkedin"><FaLinkedin/></a>
+
+                        <Tooltip id={"github"}/>
+                        <Tooltip id={"linkedin"}/>
                     </div>
 
                     <p>{t("about_us_copyright")}</p>

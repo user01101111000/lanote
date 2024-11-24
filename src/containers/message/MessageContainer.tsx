@@ -81,7 +81,8 @@ const MessageContainer: FC = (): JSX.Element => {
 
 
         <AnimatePresence>
-            {showFire && <motion.figure initial={{opacity: 1, translateY: 0}} exit={{opacity: 0, translateY: -100}}
+            {showFire && <motion.figure initial={{opacity: 1, translateY: 0}}
+                                        exit={{opacity: 0, translateY: -100}}
                                         transition={{duration: 2}}
                                         data-tooltip-content={t("burn_message")} data-tooltip-id="delete_message"
                                         className={"delete_message"}
