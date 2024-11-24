@@ -72,7 +72,7 @@ const MessageContainer: FC = (): JSX.Element => {
                     showBurn && <motion.figure initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}
                                                transition={{duration: 3}}
                                                className={"burning"}>
-                        <img src={burning} alt="burning"/>
+                        <img src={burning} alt="burning" loading={"lazy"}/>
                     </motion.figure>
                 }
             </AnimatePresence>
@@ -87,7 +87,7 @@ const MessageContainer: FC = (): JSX.Element => {
                                         data-tooltip-content={t("burn_message")} data-tooltip-id="delete_message"
                                         className={"delete_message"}
                                         onClick={burn_message}>
-                <img src={fire} alt="fire"/>
+                <img src={fire} alt="fire" loading={"lazy"}/>
             </motion.figure>}
         </AnimatePresence>
 

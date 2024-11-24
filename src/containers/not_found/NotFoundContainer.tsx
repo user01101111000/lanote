@@ -30,7 +30,7 @@ const NotFoundContainer: FC = (): JSX.Element => {
             play_audio();
             navigate("/")
         }}>
-            <img src={go_home} alt="go_home"/>
+            <img src={go_home} alt="go_home" loading={"lazy"}/>
 
             <h1>{t("go_home")}</h1>
         </figure>

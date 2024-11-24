@@ -13,3 +13,8 @@ export type SettingContextProps = {
 export type SettingContextProviderProps = {
     children: React.ReactNode
 }
+
+export type ASectionProps = {
+    children: React.ReactNode,
+    className: string
+}

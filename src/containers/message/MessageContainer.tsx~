@@ -43,7 +43,7 @@ const MessageContainer: FC = (): JSX.Element => {
         await new Promise((resolve: (value: unknown) => void): number => setTimeout(resolve, 2000));
         if (settings.sound) play_audio();
         setShowBurn(true)
-        await new Promise((resolve: (value: unknown) => void): number => setTimeout(resolve, 300000));
+        await new Promise((resolve: (value: unknown) => void): number => setTimeout(resolve, 3000));
         window.location.reload();
     }
 
@@ -87,7 +87,7 @@ const MessageContainer: FC = (): JSX.Element => {
                                         data-tooltip-content={t("burn_message")} data-tooltip-id="delete_message"
                                         className={"delete_message"}
                                         onClick={burn_message}>
-                <img src={fire} alt="fire"/>
+                <img src={fire} alt="fire" loading={"lazy"}/>
             </motion.figure>}
         </AnimatePresence>
 

@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-import {FC, JSX} from "react";
+import React, {FC, JSX} from "react";
 import {ASectionProps} from "../../types/components/components_types.ts";
 
 
