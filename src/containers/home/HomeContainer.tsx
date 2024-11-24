@@ -8,11 +8,11 @@ import {Tooltip} from "react-tooltip";
 import {messageSchema} from "../../utils/form/schema.ts";
 import {AnimatePresence, motion} from "framer-motion";
 import {useSettings} from "../../context/SettingsContext.tsx";
-import button_bg from "../../assets/images/button_bg.svg"
 import usePostMessage from "../../hooks/service/usePostMessage.tsx";
 import LoadingScreen from "../../components/common/LoadingScreen.tsx";
 import wings from "../../assets/audio/wings.mp3";
 import go_home from "../../assets/audio/go_home.mp3";
+import envelope from "../../assets/images/envelope.png"
 
 
 const HomeContainer: FC = (): JSX.Element => {
@@ -109,18 +109,19 @@ const HomeContainer: FC = (): JSX.Element => {
         <AnimatePresence>
             {showLinkPage && <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}
                                          className={"link_page"}>
-                <div className={"link_content"}>
-                    <h1>{messageURL}</h1>
-                </div>
 
-                <figure className={"copy_button"} onClick={(): void => {
-                    if (data.sound) play_audio1();
-                    navigator.clipboard.writeText(messageURL);
-                    setShowLinkPage(false)
-                }}>
-                    <img src={button_bg} alt="button_bg" loading={"lazy"}/>
-                    <h1>{t("copy")}</h1>
+                <figure className={"envelope"}>
+                    <img src={envelope} alt="envelope" loading={"lazy"}/>
+
+                    <h1>your link</h1>
+
+                    <button onClick={(): void => {
+                        if (data.sound) play_audio1();
+                        navigator.clipboard.writeText(messageURL);
+                        setShowLinkPage(false)
+                    }}>{t("copy")}</button>
                 </figure>
+
             </motion.div>}
         </AnimatePresence>
 
