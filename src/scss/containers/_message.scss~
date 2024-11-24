@@ -87,7 +87,7 @@
 
     .burning {
       position: absolute;
-      height: 500px;
+      height: 700px;
       width: auto;
 
       top: -28px;
