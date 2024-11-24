@@ -31,7 +31,7 @@ const NavButtons: FC = (): JSX.Element => {
 
     return <div className={"buttons"}>
 
-        <button data-tooltip-id="about" data-tooltip-content={t("about")} type={"button"} onClick={(): void => {
+        <button data-tooltip-id="about" data-tooltip-content={t("about")} type={"button"} className={"about_us_button"} onClick={(): void => {
             if (location.pathname != "/about_us") {
 
                 if (data.sound) play_audio();
@@ -46,7 +46,7 @@ const NavButtons: FC = (): JSX.Element => {
         </button>
 
 
-        <button data-tooltip-id="write" data-tooltip-content="write" type={"button"} onClick={(): void => {
+        <button data-tooltip-id="write" data-tooltip-content={t("write")} type={"button"} className={"home_button"} onClick={(): void => {
             if (location.pathname != "/") {
                 if (data.sound) play_audio();
                 navigate("/");
@@ -59,7 +59,7 @@ const NavButtons: FC = (): JSX.Element => {
         </button>
 
 
-        <button data-tooltip-id="settings" data-tooltip-content="settings" type={"button"} onClick={(): void => {
+        <button data-tooltip-id="settings" data-tooltip-content={t("settings")} type={"button"} onClick={(): void => {
             if (location.pathname != "/settings") {
                 if (data.sound) play_audio();
                 navigate("/settings");

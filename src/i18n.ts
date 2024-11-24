@@ -22,7 +22,15 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "error_text": "the letter has already burned... all that's left for us is to watch the dance of words with the flames...",
                 "go_home": "go home",
                 "copy": "copy",
-                "burn_message": "burn the message"
+                "burn_message": "burn the message",
+                "tour1": "pigeon to send the message",
+                "tour2": "about us section",
+                "tour3": "letter writing section",
+                "tour4": "settings section",
+                "next": "next",
+                "back": "back",
+                "skip": "skip",
+                "last": "last"
             }
         },
         az: {
@@ -42,7 +50,16 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "error_text": "məktub artıq yanıb... bizə qalan tək şey, sözlərin alovlarla rəqsini izləməkdir...",
                 "go_home": "evə qayıt",
                 "copy": "köçür",
-                "burn_message": "mesajı yandır"
+                "burn_message": "mesajı yandır",
+                "send_message": "mesajı göndər",
+                "tour1": "mesaj göndərmək üçün göyərçin",
+                "tour2": "haqqımızda bölümü",
+                "tour3": "məktub yazma bölümü",
+                "tour4": "tənzimləmələr bölümü",
+                "next": "sonrakı",
+                "back": "əvvəlki",
+                "skip": "keç",
+                "last": "son"
             }
         },
         tr: {
@@ -62,7 +79,16 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "error_text": "mektup artık yandı... bize kalan tek şey, kelimelerin alevlerle dansını izlemek...",
                 "go_home": "eve dön",
                 "copy": "kopyala",
-                "burn_message": "mesajı yak"
+                "burn_message": "mesajı yak",
+                "send_message": "mesajı gönder",
+                "tour1": "mesaj göndermek için güvercin",
+                "tour2": "hakkımızda bölümü",
+                "tour3": "mektup yazma bölümü",
+                "tour4": "ayarlar bölümü",
+                "next": "sonraki",
+                "back": "önceki",
+                "skip": "geç",
+                "last": "son"
             }
         }
     }

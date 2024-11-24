@@ -29,12 +29,17 @@ html, body {
 
   transition: all 0.3s ease-in-out;
   color: var(--text-color);
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(src/assets/images/bg.webp) center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(/src/assets/images/bg.webp) center center no-repeat;
   background-size: cover;
+
 
 }
 
 ::selection {
   background-color: var(--main-color);
   color: rgba(255, 255, 255, 0.66);
+}
+
+.joyride-tooltip {
+  background-color: red !important;
 }

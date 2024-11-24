@@ -17,7 +17,7 @@
 
   transition: all 0.3s ease-in-out;
   color: var(--text-color);
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(/src/assets/images/bg.webp) center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(/src/assets/images/bg1.webp) center center no-repeat;
   background-size: cover;
 
 
@@ -56,8 +56,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
-
 
 
       cursor: pointer;

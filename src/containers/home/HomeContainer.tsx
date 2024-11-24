@@ -76,7 +76,7 @@ const HomeContainer: FC = (): JSX.Element => {
                 <img src={paper} alt="paper" loading={"lazy"}/>
 
                 <div className={"home_content"}>
-                    <button data-tooltip-id="sender" data-tooltip-content={t("send")} type={"submit"}>
+                    <button data-tooltip-id="sender" data-tooltip-content={t("send")} type={"submit"} className={"sender_button"}>
                         <figure>
                             <img src={sender} alt="sender"/>
                         </figure>

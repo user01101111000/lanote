@@ -1,15 +1,10 @@
 import {Outlet} from "react-router-dom";
-import {FC, JSX, Suspense,} from "react";
+import {FC, JSX} from "react";
 import NavButtons from "../components/common/NavButtons.tsx";
-import LoadingScreen from "../components/common/LoadingScreen.tsx";
-
 
 const Layout: FC = (): JSX.Element => {
-
     return <main className="layout">
-        <Suspense fallback={<section className={"home"}><LoadingScreen/></section>}>
-            <Outlet/>
-        </Suspense>
+        <Outlet/>
         <NavButtons/>
     </main>
 
