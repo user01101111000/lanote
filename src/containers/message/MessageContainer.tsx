@@ -16,6 +16,7 @@ import deleting from "../../assets/audio/deleting.mp3"
 const MessageContainer: FC = (): JSX.Element => {
 
     const {id} = useParams();
+    const [showMainPage, setShowMainPage] = useState<boolean>(true);
     const [showFire, setShowFire] = useState<boolean>(true);
     const [showBurn, setShowBurn] = useState<boolean>(false);
     const {t} = useTranslation();
@@ -27,6 +28,13 @@ const MessageContainer: FC = (): JSX.Element => {
     useEffect((): void => {
         const audio: HTMLAudioElement = audio_ref.current;
         audio.load();
+
+        const img = new Image();
+        img.src = paper;
+        img.onload = (): void => {
+            setShowMainPage(true);
+        }
+
     }, []);
 
 
@@ -57,7 +65,7 @@ const MessageContainer: FC = (): JSX.Element => {
     </section>
 
 
-    return <section className={"message"}>
+    return showMainPage ? <section className={"message"}>
 
         <figure className={"paper"}>
 
@@ -92,7 +100,9 @@ const MessageContainer: FC = (): JSX.Element => {
         </AnimatePresence>
 
         <Tooltip id="delete_message"/>
-    </section>
+    </section> : <section className={"message"}>
+        <LoadingScreen/>
+    </section>;
 }
 
 export default MessageContainer;

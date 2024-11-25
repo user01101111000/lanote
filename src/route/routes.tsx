@@ -1,10 +1,14 @@
 import {RouteObject} from "react-router-dom";
-import Layout from "../layout/Layout.tsx";
-import Home from "../pages/home/Home.tsx";
-import Message from "../pages/message/Message.tsx";
-import NotFound from "../pages/not_found/NotFound.tsx";
-import Settings from "../pages/settings/Settings.tsx";
-import AboutUs from "../pages/about_us/AboutUs.tsx";
+import React, {FC, LazyExoticComponent, Suspense} from "react";
+import LoadingScreen from "../components/common/LoadingScreen.tsx";
+
+
+const Home: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }> => import("../pages/home/Home.tsx"));
+const Layout: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }> => import("../layout/Layout.tsx"));
+const AboutUs: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }> => import("../pages/about_us/AboutUs.tsx"));
+const NotFound: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }> => import("../containers/not_found/NotFoundContainer.tsx"));
+const Settings: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }> => import("../pages/settings/Settings.tsx"));
+const Message: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }> => import("../pages/message/Message.tsx"));
 
 const routes: RouteObject[] = [
     {
@@ -29,11 +33,11 @@ const routes: RouteObject[] = [
     },
     {
         path: "/message/:id",
-        element: <Message/>
+        element: <Suspense fallback={<LoadingScreen/>}><Message/></Suspense>
     },
     {
         path: "*",
-        element: <NotFound/>
+        element: <Suspense fallback={<LoadingScreen/>}><NotFound/></Suspense>
     }
 ];
 

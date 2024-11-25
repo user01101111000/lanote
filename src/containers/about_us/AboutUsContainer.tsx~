@@ -5,8 +5,6 @@ import {FaGithub} from "react-icons/fa";
 import {FaLinkedin} from "react-icons/fa";
 import {useTranslation} from "react-i18next";
 import {Tooltip} from "react-tooltip";
-import poster from "../../assets/images/lanote_poster.png"
-
 
 const AboutUsContainer: FC = (): JSX.Element => {
 
@@ -24,7 +22,7 @@ const AboutUsContainer: FC = (): JSX.Element => {
                     <figure className={"poster_lanote"}>
                         <img src={poster} alt="lanote" loading={"lazy"}/>
 
-                        <figcaption>lanote</figcaption>
+                        <figcaption>{t("lanote_poster")}</figcaption>
 
                     </figure>
 

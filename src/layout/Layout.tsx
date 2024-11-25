@@ -1,12 +1,15 @@
 import {Outlet} from "react-router-dom";
-import {FC, JSX} from "react";
+import {FC, JSX, Suspense} from "react";
 import NavButtons from "../components/common/NavButtons.tsx";
 import Tour from "../components/common/Tour.tsx";
+import LoadingScreen from "../components/common/LoadingScreen.tsx";
 
 const Layout: FC = (): JSX.Element => {
     return <main className="layout">
         <Tour/>
-        <Outlet/>
+        <Suspense fallback={<LoadingScreen/>}>
+            <Outlet/>
+        </Suspense>
         <NavButtons/>
     </main>
 

@@ -8,7 +8,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
         en: {
             translation: {
                 "type_here": "type here...",
-                "about_us_text": "you have so many things to say to someone... but why does anyone need to know... so write it, send it and burn it... forever...",
+                "about_us_text": "you have so many things to say to someone... but why does anyone need to know... so write it, send it, read it and burn it... forever...",
                 "about_us_copyright": "copyright © 2024 lanote",
                 "language": "language",
                 "sound_effects": "sound effects",
@@ -19,7 +19,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "load_text": "the pigeon will hit the road soon...",
                 "not_found_text": "i think we got lost in the palace, let's go home...",
                 "loading": "loading...",
-                "error_text": "it's too late for everything now...",
+                "error_text": "the letter has already burned...",
                 "go_home": "go home",
                 "copy": "copy",
                 "burn_message": "burn the message",
@@ -38,7 +38,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
         az: {
             translation: {
                 "type_here": "buraya yazın...",
-                "about_us_text": "kiməsə deyəcək o qədər sözünüz var ki... bəs başqasının bunu bilməsi nəyə lazımdır... ona görə yazın, göndərin və yandırın... həmişəlik...",
+                "about_us_text": "kiməsə deyəcək o qədər sözünüz var ki... bəs başqasının bunu bilməsi nəyə lazımdır... ona görə yaz, göndər, oxu və yandı... həmişəlik...",
                 "about_us_copyright": "müəlliflik hüququ © 2024 lanote",
                 "language": "dil",
                 "sound_effects": "səs effektləri",
@@ -49,7 +49,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "load_text": "göyərçin tezliklə yola düşəcək...",
                 "not_found_text": "deyəsən sarayda yolumuzu itirdik, gəl evə gedək...",
                 "loading": "yüklənir...",
-                "error_text": "artıq hər şey üçün çox gec...",
+                "error_text": "məktub artıq yanıb...",
                 "go_home": "evə qayıt",
                 "copy": "köçür",
                 "burn_message": "mesajı yandır",
@@ -63,14 +63,14 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "skip": "keç",
                 "last": "son",
                 "your_link": "sizin linkiniz",
-                "lanote_poster": "lanote afişi",
+                "lanote_poster": "lanote posteri",
 
             }
         },
         tr: {
             translation: {
                 "type_here": "buraya yazın...",
-                "about_us_text": "birine söyleyecek o kadar çok şeyin var ki... ama neden başkalarının bilmesi gerekiyor... öyleyse yaz, gönder ve yak... sonsuza kadar...",
+                "about_us_text": "birine söyleyecek o kadar çok şeyin var ki... ama neden başkalarının bilmesi gerekiyor... öyleyse yaz, gönder, oku ve yak... sonsuza kadar...",
                 "about_us_copyright": "telif hakkı © 2024 lanote",
                 "language": "dil",
                 "sound_effects": "ses efektleri",
@@ -81,7 +81,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "load_text": "güvercin yakında yola çıkacak...",
                 "not_found_text": "sanırım sarayda yolumuzu kaybettik, hadi eve gidelim...",
                 "loading": "yükleniyor...",
-                "error_text": "artık her şey için çok geç...",
+                "error_text": "mektup artık yanmıs...",
                 "go_home": "eve dön",
                 "copy": "kopyala",
                 "burn_message": "mesajı yak",
@@ -95,6 +95,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "skip": "geç",
                 "last": "son",
                 "your_link": "sizin linkiniz",
+                "lanote_poster": "lanote posteri",
             }
         }
     }

@@ -39,7 +39,11 @@ const HomeContainer: FC = (): JSX.Element => {
         img.src = paper;
         img.onload = (): void => {
             setShowMainPage(true);
+
+            console.log("indi")
+
         }
+
 
     }, [])
 

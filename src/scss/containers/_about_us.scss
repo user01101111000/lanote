@@ -68,34 +68,6 @@
       gap: 0.4rem;
     }
 
-    .poster_wrapper {
-      figure {
-        display: flex;
-        flex-direction: column;
-
-        gap: 0.5rem;
-
-        img {
-          mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.9) 80%, rgba(0, 0, 0, 0) 97%);
-        }
-
-        figcaption {
-          @include respond(tab-land) {
-            font-size: 1rem;
-          }
-
-          @include respond(tab-port) {
-            font-size: 0.8rem;
-
-          }
-
-          @include respond(phone) {
-            font-size: 0.7rem;
-          }
-        }
-      }
-
-    }
 
     h1 {
       font-size: 3rem;
