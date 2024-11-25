@@ -24,7 +24,7 @@ const AboutUsContainer: FC = (): JSX.Element => {
                     <figure className={"poster_lanote"}>
                         <img src={poster} alt="lanote" loading={"lazy"}/>
 
-                        <figcaption>lanote poster</figcaption>
+                        <figcaption>{t("lanote_poster")}</figcaption>
 
                     </figure>
 

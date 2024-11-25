@@ -32,6 +32,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "skip": "skip",
                 "last": "last",
                 "your_link": "your link",
+                "lanote_poster": "lanote poster",
             }
         },
         az: {
@@ -62,6 +63,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "skip": "keç",
                 "last": "son",
                 "your_link": "sizin linkiniz",
+                "lanote_poster": "lanote posteri",
 
             }
         },
@@ -93,6 +95,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "skip": "geç",
                 "last": "son",
                 "your_link": "sizin linkiniz",
+                "lanote_poster": "lanote posteri",
             }
         }
     }

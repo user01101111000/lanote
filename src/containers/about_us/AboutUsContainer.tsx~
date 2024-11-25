@@ -22,9 +22,9 @@ const AboutUsContainer: FC = (): JSX.Element => {
 
                 <div className={"poster_wrapper"}>
                     <figure className={"poster_lanote"}>
-                        <img src={poster} alt="poster_lanote" loading={"lazy"}/>
+                        <img src={poster} alt="lanote" loading={"lazy"}/>
 
-                        <figcaption>lanote poster</figcaption>
+                        <figcaption>lanote</figcaption>
 
                     </figure>
 

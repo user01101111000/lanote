@@ -32,6 +32,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "skip": "skip",
                 "last": "last",
                 "your_link": "your link",
+                "lanote_poster": "lanote poster",
             }
         },
         az: {
@@ -48,7 +49,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "load_text": "göyərçin tezliklə yola düşəcək...",
                 "not_found_text": "deyəsən sarayda yolumuzu itirdik, gəl evə gedək...",
                 "loading": "yüklənir...",
-                "error_text": "artıq hər şey üçün gec...",
+                "error_text": "artıq hər şey üçün çox gec...",
                 "go_home": "evə qayıt",
                 "copy": "köçür",
                 "burn_message": "mesajı yandır",
@@ -62,6 +63,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "skip": "keç",
                 "last": "son",
                 "your_link": "sizin linkiniz",
+                "lanote_poster": "lanote afişi",
 
             }
         },
