@@ -7,9 +7,6 @@ const LoadingScreen: FC = (): JSX.Element => {
 
     const {t} = useTranslation();
 
-    console.log("ishledi")
-
-
     return <motion.div className={"loading_screen"}>
         <motion.figure initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}}>
             <img src={loading} alt="loading" loading={"lazy"}/>
