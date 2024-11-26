@@ -1,6 +1,6 @@
 export type SettingProps = {
     lang: string,
-    sound: boolean
+    sound: boolean,
 }
 
 

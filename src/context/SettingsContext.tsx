@@ -11,7 +11,6 @@ const SettingContext: Context<SettingContextProps> = createContext<SettingContex
 
 const SettingContextProvider: FC<SettingContextProviderProps> = (props: SettingContextProviderProps): JSX.Element => {
 
-
     const current_data: SettingProps = localStorage.getItem("settings") ? JSON.parse(localStorage.getItem("settings") as string) : {
         lang: "en",
         sound: true

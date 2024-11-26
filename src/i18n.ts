@@ -33,6 +33,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "last": "last",
                 "your_link": "your link",
                 "lanote_poster": "lanote poster",
+                "open_env": "open the letter"
             }
         },
         az: {
@@ -64,6 +65,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "last": "son",
                 "your_link": "sizin linkiniz",
                 "lanote_poster": "lanote posteri",
+                "open_env": "məktubu aç"
 
             }
         },
@@ -81,7 +83,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "load_text": "güvercin yakında yola çıkacak...",
                 "not_found_text": "sanırım sarayda yolumuzu kaybettik, hadi eve gidelim...",
                 "loading": "yükleniyor...",
-                "error_text": "mektup artık yanmıs...",
+                "error_text": "mektup artık yanmış...",
                 "go_home": "eve dön",
                 "copy": "kopyala",
                 "burn_message": "mesajı yak",
@@ -96,6 +98,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "last": "son",
                 "your_link": "sizin linkiniz",
                 "lanote_poster": "lanote posteri",
+                "open_env": "mektubu aç"
             }
         }
     }

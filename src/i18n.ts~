@@ -33,12 +33,13 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "last": "last",
                 "your_link": "your link",
                 "lanote_poster": "lanote poster",
+                "open_env": "open the letter"
             }
         },
         az: {
             translation: {
                 "type_here": "buraya yazın...",
-                "about_us_text": "kiməsə deyəcək o qədər sözünüz var ki... bəs başqasının bunu bilməsi nəyə lazımdır... ona görə yaz, göndər, oxu və yandı... həmişəlik...",
+                "about_us_text": "kiməsə deyəcək o qədər sözünüz var ki... bəs başqasının bunu bilməsi nəyə lazımdır... ona görə yaz, göndər, oxu və yandır... həmişəlik...",
                 "about_us_copyright": "müəlliflik hüququ © 2024 lanote",
                 "language": "dil",
                 "sound_effects": "səs effektləri",
@@ -64,6 +65,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "last": "son",
                 "your_link": "sizin linkiniz",
                 "lanote_poster": "lanote posteri",
+                "open_env": "məktubu aç"
 
             }
         },
@@ -96,6 +98,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 "last": "son",
                 "your_link": "sizin linkiniz",
                 "lanote_poster": "lanote posteri",
+                "open_env": "mektubu aç"
             }
         }
     }

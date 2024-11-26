@@ -65,7 +65,7 @@ const MessageContainer: FC = (): JSX.Element => {
     </section>
 
 
-    return <section className={"message"}>
+    return showMainPage ? <section className={"message"}>
 
         <figure className={"paper"}>
 
@@ -100,7 +100,9 @@ const MessageContainer: FC = (): JSX.Element => {
         </AnimatePresence>
 
         <Tooltip id="delete_message"/>
-    </section>
+    </section> : <section className={"message"}>
+        <LoadingScreen/>
+    </section>;
 }
 
 export default MessageContainer;

@@ -72,7 +72,7 @@ const MessageContainer: FC = (): JSX.Element => {
             <img src={paper} alt="paper" loading={"lazy"}/>
 
             <div className={"message_content"}>
-                {data?.fields.message.stringValue}
+                <p>{data?.fields.message.stringValue}</p>
             </div>
 
             <AnimatePresence>

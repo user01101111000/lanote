@@ -39,7 +39,7 @@
       position: absolute;
       inset: 0;
 
-      padding-inline: clamp(0.5rem, 2vw, 1rem);
+      padding-inline: 1rem;
 
       transform: scaleX(0.80) scaleY(0.72) translateY(-5px);
       mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.8) 90%, rgba(0, 0, 0, 0) 100%);

@@ -252,7 +252,7 @@
 
     flex-direction: column;
 
-    gap: 2rem;
+    gap: clamp(1rem, 2vw, 2rem);
 
     background-color: rgba(0, 0, 0, 0.75);
 
@@ -260,7 +260,6 @@
     .envelope {
       height: auto;
       width: 400px;
-      position: relative;
 
       img {
         height: 100%;
@@ -269,26 +268,29 @@
         filter: brightness(80%);
       }
 
-      h1 {
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(-30deg);
 
-        font-weight: 600;
-
-        font-size: 1.5rem;
-
-        text-align: center;
-
-        color: var(--main-color);
+      @include respond(tab-land) {
+        width: 300px;
       }
 
+      @include respond(tab-port) {
+        width: 250px;
+      }
+
+      @include respond(phone) {
+        width: 200px;
+      }
+
+    }
+
+    .envelope_buttons {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem ;
+
       button {
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         outline: none;
         border: 1px solid rgba(255, 255, 255, 0.4);
         background-color: var(--main-color);
@@ -302,11 +304,10 @@
 
         transition: all 0.3s ease-in-out;
 
-        &:hover{
+        &:hover {
           filter: brightness(140%);
         }
       }
-
 
       @include respond(tab-land) {
         width: 300px;

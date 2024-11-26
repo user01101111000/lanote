@@ -11,7 +11,7 @@ import usePostMessage from "../../hooks/service/usePostMessage.tsx";
 import LoadingScreen from "../../components/common/LoadingScreen.tsx";
 import wings from "../../assets/audio/wings.mp3";
 import go_home from "../../assets/audio/go_home.mp3";
-import envelope from "../../assets/images/envelope.png"
+import envelope from "../../assets/images/envelope.svg"
 import ASection from "../../components/common/ASection.tsx";
 
 const HomeContainer: FC = (): JSX.Element => {
@@ -123,15 +123,22 @@ const HomeContainer: FC = (): JSX.Element => {
 
                     <figure className={"envelope"}>
                         <img src={envelope} alt="envelope" loading={"lazy"}/>
+                    </figure>
 
-                        <h1>{t("your_link")}</h1>
+                    <div className={"envelope_buttons"}>
+                        <button onClick={(): void => {
+                            if (data.sound) play_audio1();
+                            window.open(messageURL, "_blank");
+                            setShowLinkPage(false)
+
+                        }}>{t("open_env")}</button>
 
                         <button onClick={(): void => {
                             if (data.sound) play_audio1();
                             navigator.clipboard.writeText(messageURL);
                             setShowLinkPage(false)
                         }}>{t("copy")}</button>
-                    </figure>
+                    </div>
 
                 </motion.div>}
             </AnimatePresence>

@@ -1,6 +1,7 @@
 export type SettingProps = {
     lang: string,
-    sound: boolean
+    sound: boolean,
+    load?: boolean
 }
 
 
@@ -12,7 +13,6 @@ export interface IMessage {
 }
 
 interface Fields {
-    read: Read;
     id: Id;
     message: Id;
     date: Date;
@@ -24,8 +24,4 @@ interface Date {
 
 interface Id {
     stringValue: string;
-}
-
-interface Read {
-    booleanValue: boolean;
 }
