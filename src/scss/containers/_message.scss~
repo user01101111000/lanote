@@ -13,8 +13,7 @@
   flex-direction: column;
 
   gap: clamp(0.8rem, 2vw, 2rem);
-
-  transition: all 0.3s ease-in-out;
+  
   color: var(--text-color);
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('/src/assets/images/bg.webp') center center no-repeat;
   background-size: cover;
@@ -39,7 +38,7 @@
       position: absolute;
       inset: 0;
 
-      padding-inline: 1rem;
+      padding-inline: clamp(0.5rem, 2vw, 1rem);
 
       transform: scaleX(0.80) scaleY(0.72) translateY(-5px);
       mask-image: radial-gradient(circle, rgba(0, 0, 0, 0.8) 90%, rgba(0, 0, 0, 0) 100%);
