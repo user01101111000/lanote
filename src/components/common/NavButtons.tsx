@@ -3,7 +3,7 @@ import about from "../../assets/icons/about.webp";
 import sender from "../../assets/icons/pen.webp";
 import setting from "../../assets/icons/setting.webp";
 import {useSettings} from "../../context/SettingsContext.tsx";
-import {Location, NavigateFunction, useLocation, useNavigate} from "react-router-dom";
+import {Location, NavigateFunction, useLocation, useNavigate} from "react-router";
 import {Tooltip} from 'react-tooltip'
 import {useTranslation} from "react-i18next";
 import next_page from "../../assets/audio/next_page.mp3";

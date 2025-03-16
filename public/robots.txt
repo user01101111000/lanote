@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /home/
+Allow: /home/about_us/
+Allow: /about_us/
+Allow: /settings/
+Allow: /home/settings/
+Sitemap: https://lanote.vercel.app/sitemap.xml

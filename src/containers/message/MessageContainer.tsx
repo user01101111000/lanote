@@ -1,7 +1,7 @@
 import {FC, JSX, MutableRefObject, useEffect, useRef, useState} from "react";
 import paper from "../../assets/images/paper.webp";
 import fire from "../../assets/icons/fire.png";
-import {useParams} from "react-router-dom";
+import {useParams} from "react-router";
 import useGetMessage from "../../hooks/service/useGetMessage.tsx";
 import {Tooltip} from "react-tooltip";
 import {AnimatePresence, motion} from "framer-motion";

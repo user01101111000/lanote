@@ -1,4 +1,4 @@
-import {Outlet} from "react-router-dom";
+import {Outlet} from "react-router";
 import {FC, JSX, Suspense} from "react";
 import NavButtons from "../components/common/NavButtons.tsx";
 import Tour from "../components/common/Tour.tsx";

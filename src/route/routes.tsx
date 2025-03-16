@@ -1,4 +1,4 @@
-import {RouteObject} from "react-router-dom";
+import {RouteObject} from "react-router";
 import React, {FC, LazyExoticComponent, Suspense} from "react";
 import LoadingScreen from "../components/common/LoadingScreen.tsx";
 
@@ -12,7 +12,7 @@ const Message: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }>
 
 const routes: RouteObject[] = [
     {
-        path: "/",
+        path: "/home?",
         element: <Layout/>,
         children: [
             {
@@ -21,12 +21,12 @@ const routes: RouteObject[] = [
             },
 
             {
-                path: "/about_us",
+                path: "about_us",
                 element: <AboutUs/>
             },
 
             {
-                path: "/settings",
+                path: "settings",
                 element: <Settings/>
             }
         ]

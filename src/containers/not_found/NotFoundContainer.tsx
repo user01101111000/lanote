@@ -1,7 +1,7 @@
 import {FC, JSX, MutableRefObject, useEffect, useRef} from "react";
 import go_home from "../../assets/images/button_bg.svg"
 import {useTranslation} from "react-i18next";
-import {NavigateFunction, useNavigate} from "react-router-dom";
+import {NavigateFunction, useNavigate} from "react-router";
 
 
 const NotFoundContainer: FC = (): JSX.Element => {

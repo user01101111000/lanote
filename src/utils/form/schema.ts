@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import {ObjectSchema} from "yup";
+import { ObjectSchema } from "yup";
 
 
 const messageSchema: ObjectSchema<{ message: string | undefined }> = yup.object().shape({
@@ -7,4 +7,4 @@ const messageSchema: ObjectSchema<{ message: string | undefined }> = yup.object(
 });
 
 
-export {messageSchema};
+export { messageSchema };
