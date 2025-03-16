@@ -9,7 +9,7 @@ const LoadingScreen: FC = (): JSX.Element => {
 
     return <motion.div className={"loading_screen"}>
         <motion.figure initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}}>
-            <img src={loading} alt="loading" loading={"lazy"}/>
+            <img src={loading} alt="loading" loading={"lazy"} title="loading" width={150} height={"auto"} />
         </motion.figure>
 
         <motion.h1 initial={{opacity: 0}} animate={{opacity: 1}}

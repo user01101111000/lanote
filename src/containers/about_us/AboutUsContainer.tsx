@@ -12,11 +12,11 @@ const AboutUsContainer: FC = (): JSX.Element => {
 
     return <ASection className={"about_us"}>
         <figure className={"paper"}>
-            <img src={paper} alt="paper" loading={"lazy"}/>
-
+            
+        <img src={paper} alt="paper" title="paper" loading={"eager"} height={"auto"} width={"573px"} />
 
             <div className={"about_us_content"}>
-                <h1>lanote</h1>
+                <p className="about_us_title">lanote</p>
 
                 <p>{t("about_us_text")}</p>
 

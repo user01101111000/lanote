@@ -8,7 +8,6 @@ const Tour: FC = (): JSX.Element => {
 
     const [run, setRun] = useState<boolean>(localStorage.getItem("tourCompleted") !== "true");
 
-
     const steps: Step[] = [
         {
             target: ".sender_button",
@@ -30,7 +29,7 @@ const Tour: FC = (): JSX.Element => {
             content: `⚙️${t("tour4")}⚙️`,
             disableBeacon: true,
         }
-    ]
+    ];
 
 
     const defaultOptions = {
@@ -86,6 +85,6 @@ const Tour: FC = (): JSX.Element => {
                         last: t("last"),
                     }}
     />
-}
+};
 
 export default Tour;

@@ -1,12 +1,11 @@
-import {FC, JSX, MutableRefObject, useEffect, useRef} from "react";
+import { FC, JSX, MutableRefObject, useEffect, useRef } from "react";
 import go_home from "../../assets/images/button_bg.svg"
-import {useTranslation} from "react-i18next";
-import {NavigateFunction, useNavigate} from "react-router";
-
+import { useTranslation } from "react-i18next";
+import { NavigateFunction, useNavigate } from "react-router";
 
 const NotFoundContainer: FC = (): JSX.Element => {
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     const navigate: NavigateFunction = useNavigate();
     const audio_ref: MutableRefObject<HTMLAudioElement> = useRef<HTMLAudioElement>(new Audio("src/assets/audio/go_home.mp3"));
 
@@ -22,17 +21,15 @@ const NotFoundContainer: FC = (): JSX.Element => {
 
     return <section className={"not_found"}>
 
-
-        <h1>{t("not_found_text")}</h1>
-
+        <p className="not_found_text">{t("not_found_text")}</p>
 
         <figure onClick={(): void => {
             play_audio();
             navigate("/")
         }}>
-            <img src={go_home} alt="go_home" loading={"lazy"}/>
+            <img src={go_home} alt="go_home" loading={"eager"} title="go_home" width={150} height={"auto"} />
 
-            <h1>{t("go_home")}</h1>
+            <p className="not_found_button">{t("go_home")}</p>
         </figure>
 
     </section>

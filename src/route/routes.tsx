@@ -6,7 +6,7 @@ import LoadingScreen from "../components/common/LoadingScreen.tsx";
 const Home: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }> => import("../pages/home/Home.tsx"));
 const Layout: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }> => import("../layout/Layout.tsx"));
 const AboutUs: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }> => import("../pages/about_us/AboutUs.tsx"));
-const NotFound: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }> => import("../containers/not_found/NotFoundContainer.tsx"));
+const NotFound: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }> => import("../pages/not_found/NotFound.tsx"));
 const Settings: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }> => import("../pages/settings/Settings.tsx"));
 const Message: LazyExoticComponent<FC> = React.lazy((): Promise<{ default: FC }> => import("../pages/message/Message.tsx"));
 

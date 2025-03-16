@@ -36,8 +36,7 @@ const SettingsContainer: FC = (): JSX.Element => {
     return <ASection className={"settings"}>
 
         <figure className={"paper"}>
-            <img src={paper} alt="paper" loading={"lazy"}/>
-
+        <img src={paper} alt="paper" title="paper" loading={"eager"} height={"auto"} width={"573px"} />
 
             <div className={"settings_content"}>
 
